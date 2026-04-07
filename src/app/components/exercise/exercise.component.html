@@ -1,0 +1,36 @@
+<section class="exercise">
+    <h2>Exercice</h2>
+
+    <!-- Zone des filtres par genre -->
+    <div class="genre-filters">
+        <!-- TODO: Question 2 - Afficher les boutons de genre ici -->
+        <!-- TODO: Question 4 - Bouton reinitialiser -->
+    </div>
+
+    <!-- Liste des films -->
+    <div class="movie-list">
+        <div *ngFor="let movie of filteredMovies" class="movie-card">
+            <div class="movie-card-content">
+                <h3>{{ movie.title }}</h3>
+                <p class="overview">{{ movie.overview | truncate:150 }}</p>
+                <div class="movie-meta">
+                    <span class="rating">{{ movie.vote_average }}</span>
+                    <span class="date">{{ movie.release_date }}</span>
+                </div>
+                <div class="genres">
+                    <!-- TODO: Question 1 - Afficher les genres sous forme de badges -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Etat vide -->
+    <div *ngIf="filteredMovies.length === 0 && !loading" class="empty-state">
+        <p>Aucun film trouve</p>
+    </div>
+
+    <!-- Chargement -->
+    <div *ngIf="loading" class="loading">
+        <p>Chargement des films...</p>
+    </div>
+</section>

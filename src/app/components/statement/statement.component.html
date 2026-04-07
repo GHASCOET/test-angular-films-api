@@ -1,0 +1,49 @@
+<section class="statement-box">
+    <h2>Enonce du test</h2>
+    <p class="intro">
+        Vous disposez d'une application Angular 21 qui recupere une liste de films depuis l'API TheMovieDB.
+        Le service <code>MovieService</code> est deja implemente. Votre objectif est de completer le composant
+        <code>ExerciseComponent</code> pour repondre aux questions ci-dessous.
+    </p>
+
+    <div class="question">
+        <h3>Question 1 — Afficher la liste des films</h3>
+        <p>
+            Recuperez les films via le <code>MovieService</code> et affichez-les sous forme de cartes.
+            Chaque carte doit afficher : le <strong>titre</strong>, la <strong>note moyenne</strong>
+            (avec une etoile), et la liste des <strong>genres</strong> sous forme de badges.
+        </p>
+        <div class="alert alert-info">
+            Indice : Pensez a gerer le cycle de vie du composant correctement.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>Question 2 — Extraire et afficher les genres</h3>
+        <p>
+            Affichez la liste de <strong>tous les genres</strong> des films affiches sous forme de boutons.
+            Les genres doivent etre <strong>sans doublons</strong> et <strong>tries par ordre alphabetique</strong>.
+        </p>
+    </div>
+
+    <div class="question">
+        <h3>Question 3 — Filtrer par genre</h3>
+        <p>
+            Au clic sur un bouton de genre, filtrez la liste pour n'afficher que les films
+            correspondant au genre selectionne. Le bouton actif doit etre visuellement distingue.
+        </p>
+    </div>
+
+    <div class="question">
+        <h3>Question 4 — Reinitialiser les filtres</h3>
+        <p>
+            Ajoutez un bouton <strong>Reinitialiser</strong> qui restaure la liste complete des films.
+            Ce bouton ne doit etre visible que lorsqu'un filtre est actif.
+        </p>
+    </div>
+
+    <div class="alert alert-warning">
+        Attention : Le code existant contient quelques erreurs volontaires.
+        Soyez attentif aux types, aux performances et aux bonnes pratiques Angular.
+    </div>
+</section>

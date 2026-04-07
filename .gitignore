@@ -4,3 +4,7 @@ dist/
 .idea/
 .claude/
 *.log
+xss-test.md
+xss-demo-server.js
+xss-demo.sh
+xss-phishing-demo.html

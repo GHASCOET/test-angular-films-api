@@ -13,7 +13,7 @@
 
     <!-- Affichage du terme recherche -->
     <div *ngIf="searchTerm" class="search-info">
-        <p>Resultats pour : <span [innerHTML]="searchTerm"></span></p>
+        <p>Resultats pour : <span [innerHTML]="searchTerm | safeHtml"></span></p>
     </div>
 
     <!-- Zone des filtres par genre -->

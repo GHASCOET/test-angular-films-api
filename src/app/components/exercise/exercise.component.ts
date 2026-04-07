@@ -4,11 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { MovieService } from '../../services/movie.service';
 import { Movie } from '../../types';
 import { TruncatePipe } from '../../pipes/truncate.pipe';
+import { SafeHtmlPipe } from '../../pipes/safe-html.pipe';
 
 @Component({
     selector: 'app-exercise',
     standalone: true,
-    imports: [CommonModule, FormsModule, TruncatePipe],
+    imports: [CommonModule, FormsModule, TruncatePipe, SafeHtmlPipe],
     templateUrl: './exercise.component.html',
     styleUrl: './exercise.component.css',
 })

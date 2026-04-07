@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MovieService } from '@services/movie.service';
-import { Movie } from '@types';
-import { TruncatePipe } from '@pipes/truncate.pipe';
+import { MovieService } from '../../services/movie.service';
+import { Movie } from '../../types';
+import { TruncatePipe } from '../../pipes/truncate.pipe';
 
 @Component({
     selector: 'app-exercise',

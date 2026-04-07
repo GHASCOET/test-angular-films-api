@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { StatementComponent } from '@components/statement/statement.component';
-import { ExerciseComponent } from '@components/exercise/exercise.component';
+import { StatementComponent } from './components/statement/statement.component';
+import { ExerciseComponent } from './components/exercise/exercise.component';
 
 @Component({
     selector: 'app-root',

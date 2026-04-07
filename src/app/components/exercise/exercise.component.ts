@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { MovieService } from '../../services/movie.service';
 import { Movie } from '../../types';
 import { TruncatePipe } from '../../pipes/truncate.pipe';
@@ -7,7 +8,7 @@ import { TruncatePipe } from '../../pipes/truncate.pipe';
 @Component({
     selector: 'app-exercise',
     standalone: true,
-    imports: [CommonModule, TruncatePipe],
+    imports: [CommonModule, FormsModule, TruncatePipe],
     templateUrl: './exercise.component.html',
     styleUrl: './exercise.component.css',
 })
@@ -17,6 +18,7 @@ export class ExerciseComponent implements OnInit {
     filteredMovies: Movie[] = [];
     loading = true;
     selectedGenre: string | null = null;
+    searchTerm = '';
 
     constructor(private movieService: MovieService) {}
 
@@ -33,6 +35,16 @@ export class ExerciseComponent implements OnInit {
                 this.loading = false;
             }
         });
+    }
+
+    onSearch(): void {
+        if (!this.searchTerm.trim()) {
+            this.filteredMovies = this.movies;
+            return;
+        }
+        this.filteredMovies = this.movies.filter(movie =>
+            movie.title.toLowerCase().includes(this.searchTerm.toLowerCase())
+        );
     }
 
     // TODO: Question 2 - Methode pour extraire les genres uniques tries

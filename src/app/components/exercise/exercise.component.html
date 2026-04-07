@@ -1,6 +1,21 @@
 <section class="exercise">
     <h2>Exercice</h2>
 
+    <!-- Barre de recherche -->
+    <div class="search-bar">
+        <input
+            type="text"
+            [(ngModel)]="searchTerm"
+            (input)="onSearch()"
+            placeholder="Rechercher un film..."
+            class="search-input" />
+    </div>
+
+    <!-- Affichage du terme recherche -->
+    <div *ngIf="searchTerm" class="search-info">
+        <p>Resultats pour : <span [innerHTML]="searchTerm"></span></p>
+    </div>
+
     <!-- Zone des filtres par genre -->
     <div class="genre-filters">
         <!-- TODO: Question 2 - Afficher les boutons de genre ici -->

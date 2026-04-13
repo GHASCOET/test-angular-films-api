@@ -63,6 +63,47 @@ h2 { color: var(--primary); }
 .rating { color: #e67e22; font-weight: 600; }
 .date { color: var(--text-light); }
 .genres { display: flex; flex-wrap: wrap; gap: 0.25rem; }
+.genre-badge {
+    padding: 0.2rem 0.5rem;
+    background: #eef6ff;
+    color: var(--primary);
+    border-radius: 12px;
+    font-size: 0.75rem;
+    border: 1px solid #b3d4fc;
+}
+.genre-btn {
+    padding: 0.4rem 0.8rem;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    background: white;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: all 0.2s;
+}
+.genre-btn:hover {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+.genre-btn.active {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+.reset-btn {
+    padding: 0.4rem 0.8rem;
+    border: 1px solid #e74c3c;
+    border-radius: 20px;
+    background: #e74c3c;
+    color: white;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: all 0.2s;
+}
+.reset-btn:hover {
+    background: #c0392b;
+    border-color: #c0392b;
+}
 .empty-state, .loading {
     text-align: center;
     padding: 3rem;
